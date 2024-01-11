@@ -51,3 +51,12 @@ CREATE TABLE task_archive (
     FOREIGN KEY (task_id) REFERENCES tasks(task_id),
     FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
+
+
+-- Create user settings table
+CREATE TABLE user_settings (
+    user_id INT PRIMARY KEY,
+    theme VARCHAR(255) DEFAULT 'default',
+    other_settings VARCHAR(255),
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
