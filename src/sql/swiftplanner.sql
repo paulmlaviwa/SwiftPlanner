@@ -41,3 +41,13 @@ ADD COLUMN user_id INT,
 ADD CONSTRAINT fk_user_id
     FOREIGN KEY (user_id)
     REFERENCES users(user_id);
+
+
+-- Create archive table for completed tasks
+CREATE TABLE task_archive (
+    task_id INT PRIMARY KEY,
+    user_id INT,
+    archived_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (task_id) REFERENCES tasks(task_id),
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
