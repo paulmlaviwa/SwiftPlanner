@@ -1,2 +1,2 @@
 # SwfitPlanner
-SwiftPlanner is a task management application designed to help users organize and track their tasks efficiently. 
+SwiftPlanner is a task management application designed to help users organize and track their tasks efficiently. It provides a user-friendly interface to add, view, and manage tasks with ease.
