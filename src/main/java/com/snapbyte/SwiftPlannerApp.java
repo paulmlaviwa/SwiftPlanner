@@ -3,30 +3,23 @@ package com.snapbyte;
 import java.util.Scanner;
 
 public class SwiftPlannerApp {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    private static TaskManager taskManager = new TaskManager();
+    private static Scanner scanner = new Scanner(System.in);
 
+    public static void main(String[] args) {
         System.out.println("Hi. Welcome to the SwiftPlanner!");
 
         int choice;
         do {
-            System.out.println("\nWhat would you like to do today? ");
-            System.out.println("1. View Tasks");
-            System.out.println("2. Add Task");
-            System.out.println("3. Exit");
-            System.out.print("Enter your choice: ");
-
-            choice = scanner.nextInt();
-            scanner.nextLine();
+            MenuPrinter.printMenu();
+            choice = UserInputHandler.getUserChoice(scanner);
 
             switch (choice) {
                 case 1:
-                    System.out.println("Displaying the tasks list...");
-
+                    TaskViewer.viewTasks(taskManager);
                     break;
                 case 2:
-                    System.out.println("Adding a new task...");
-
+                    TaskAdd.addTask(scanner, taskManager);
                     break;
                 case 3:
                     System.out.println("Exiting SwiftPlanner. Goodbye!");
