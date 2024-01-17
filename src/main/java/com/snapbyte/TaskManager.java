@@ -10,4 +10,6 @@ public class TaskManager {
         this.tasks = new ArrayList<>();
     }
 
+    public void addTask(Task newTask) {
+    }
 }

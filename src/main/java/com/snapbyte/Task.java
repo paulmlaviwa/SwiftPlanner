@@ -9,6 +9,9 @@ public class Task {
     private String created_at;
     private String updated_at;
 
+    public Task(String title, String description, String dueDate) {
+    }
+
     public int getTaskId() {
         return taskId;
     }
