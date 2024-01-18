@@ -7,7 +7,6 @@ CREATE DATABASE IF NOT EXISTS swiftplanner;
 -- Switch to the swiftplanner db
 USE swiftplanner;
 
-
 -- Create a table for tasks
 CREATE TABLE tasks (
     task_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -34,14 +33,12 @@ INSERT INTO users (username, email) VALUES
 ('paulmlaviwa', 'mlaviwa.paul@gmail.com'),
 ('zinniazimba', 'zimba.zinnia@gmail.com');
 
-
 -- Add a foreign key constraint for referencing user_id from a users table
 ALTER TABLE tasks
 ADD COLUMN user_id INT,
 ADD CONSTRAINT fk_user_id
     FOREIGN KEY (user_id)
     REFERENCES users(user_id);
-
 
 -- Create archive table for completed tasks
 CREATE TABLE task_archive (
@@ -51,7 +48,6 @@ CREATE TABLE task_archive (
     FOREIGN KEY (task_id) REFERENCES tasks(task_id),
     FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
-
 
 -- Create user settings table
 CREATE TABLE user_settings (
