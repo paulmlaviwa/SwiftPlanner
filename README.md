@@ -17,3 +17,8 @@ SwiftPlanner’s intelligent task-tracking system keeps users informed about the
 Personalized Experience:
 Tailor SwiftPlanner to your preferences with customizable settings. Choose themes, adjust preferences, and create a task management environment that suits your style.
 
+### Getting Started
+
+#### Installation
+1. Clone the repository
+2. Run SwiftPlanner
